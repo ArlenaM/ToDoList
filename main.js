@@ -1,15 +1,11 @@
 let toDos = [];
-
+let addButton=document.getElementById("addButton").addEventListener("click", addItem);
 
 // add item function
-let addItem = function(){
-	let task = document.getElementById("toDoItem");
+// TODO: clear text box after user submits
+function addItem(){
+	let task = document.getElementById("toDoItem").value;
 	toDos.push(task);
-
-	console.log(task);
-
-	let addButton= document.getElementById("addButton").
-	addButton.addEventlistener("click", addItem)
 }
 
 // delete item function
