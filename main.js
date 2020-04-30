@@ -9,7 +9,11 @@ function addItem(e){
 		let task = document.getElementById("toDoItem").value;
 		toDos.push(task);
 		e.preventDefault();
-		console.log(toDos);
+		
+		let title = document.getElementById("title");
+		let newToDo = document.createElement("p");
+		title.appendChild(newToDo);
+		newToDo.innerText = task;
 	}
 }
 
