@@ -3,8 +3,6 @@ let addButton = document.getElementById("addButton").addEventListener("click", a
 let newToDo;
 
 // add item function
-// TODO: clear text box after user submits
-
 function addItem(e){
 		let task = document.getElementById("toDoItem").value;
 		toDos.push(task);
@@ -18,11 +16,12 @@ function addItem(e){
 		//this feels like duplicated work
 		title.appendChild(newToDo);
 		newToDo.innerText = task;
+		document.getElementById("toDoItem").value ="";
 	}
 
-// delete item function
 // cross off item function
-
-function crossOffItem(e){
+// TODO: this function only crosses off the last task added, even if you click on a different one
+function crossOffItem(){
 	newToDo.classList.add("finishedTask");
 }
+// delete item function
