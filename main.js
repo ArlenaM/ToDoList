@@ -11,11 +11,17 @@ function addItem(e){
 		let title = document.getElementById("title");
 		newToDo = document.createElement("li")
 		newToDo.addEventListener("click", crossOffItem, false);
+		
+		newToDo.addEventListener("hover", function(){
+			newToDo.style.cusor = "pointer";
+		});
+
 		newToDo.classList.add("listItem");
 		
 		//this feels like duplicated work
 		title.appendChild(newToDo);
 		newToDo.innerText = task;
+		
 		document.getElementById("toDoItem").value ="";
 	}
 
@@ -24,4 +30,5 @@ function addItem(e){
 function crossOffItem(){
 	newToDo.classList.add("finishedTask");
 }
+
 // delete item function
