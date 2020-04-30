@@ -1,0 +1,11 @@
+.finishedTask{
+	text-decoration: line-through;
+}
+
+li{
+	font-size: 14px;
+}
+
+ul{
+	font-size: 14px
+}
