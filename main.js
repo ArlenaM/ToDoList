@@ -5,17 +5,21 @@ let addButton = document.getElementById("addButton").addEventListener("click", a
 // TODO: clear text box after user submits
 
 function addItem(e){
-	{
 		let task = document.getElementById("toDoItem").value;
 		toDos.push(task);
 		e.preventDefault();
 		
 		let title = document.getElementById("title");
-		let newToDo = document.createElement("p");
+		let newToDo = document.createElement("li").addEventListener("click", crossOffItem, false);
+		newToDo.classList.add("listItem");
+		
+		//this feels like duplicated work
 		title.appendChild(newToDo);
 		newToDo.innerText = task;
 	}
-}
 
 // delete item function
 // cross off item function
+function crossOffItem(){
+	newToDo.classList.add("finishedTask");
+}
